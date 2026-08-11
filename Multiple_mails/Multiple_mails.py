@@ -1,32 +1,23 @@
-"""
-We Want to Send Automated Email using python by adding attachment(file)
-"""
+#now in this case we will use email package where we can add subject to the mail and also
+#we can give to address
 import smtplib
 import email
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
-from email.mime.base import MIMEBase
-from email import encoders
-import os
-#same include mail with subject code
-l=list(map(str,input("Enter multiple mails into list:").split(",")))
+#give from adress,to adress and subject
+From=input("Enter your mail:")
+app_password=input("Enter your mail app password(16):")
+l=list(map(str,input("Enter To mails into list:").split(",")))
 for To in l:
-    From=input("Enter your mail here:")
-    Subject="Email Automation with attachment"
-    app_password=input("Enter your mail app password(16):")
-    body="IN this project we will uderstand how python can be usefull in real world applications"
-    attach ="simplemail.py"
+    Subject="Email Automation"
     msg=MIMEMultipart()
     msg['From']=From
-    msg["To"]=To
-    msg["Subject"]=Subject
+    msg['To']=To
+    msg['Subject']=Subject
+    body="Hello,Welocome to Email Automation"
     msg.attach(MIMEText(body))
-    part=MIMEBase('application','octet-stream')
-    part.set_payload(open(attach,'rb').read())
-    encoders.encode_base64(part)
-    part.add_header('Content-Disposition','attachment ; filename="%s" '%(os.path.basename(attach))) 
-    msg.attach(part)
-    text=msg.as_string(part)
+    text=msg.as_string()
+    #same as previous SMTP Usage we will follow
     server =smtplib.SMTP('smtp.gmail.com',587)
     server.starttls()
     server.login(From,app_password)
