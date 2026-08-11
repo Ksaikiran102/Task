@@ -10,7 +10,7 @@ from email import encoders
 import os
 #same include mail with subject code
 l=list(map(str,input("Enter multiple mails into list:").split(",")))
-for To in list:
+for To in l:
     From=input("Enter your mail here:")
     Subject="Email Automation with attachment"
     app_password=input("Enter your mail app password(16):")
