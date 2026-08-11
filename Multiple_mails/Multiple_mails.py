@@ -9,11 +9,11 @@ from email.mime.base import MIMEBase
 from email import encoders
 import os
 #same include mail with subject code
-list=["22311a05n3@cse.sreenidhi.edu.in","bandarichintu329@gmail.com","harishkavati01@gmail.com"]
+l=list(map(str,input("Enter multiple mails into list:").split(",")))
 for To in list:
-    From='kasarlasaikiran002@gmail.com'
+    From=input("Enter your mail here:")
     Subject="Email Automation with attachment"
-    app_password="sxlk uqbw yvgm zcqe"
+    app_password=input("Enter your mail app password(16):")
     body="IN this project we will uderstand how python can be usefull in real world applications"
     attach ="simplemail.py"
     msg=MIMEMultipart()
