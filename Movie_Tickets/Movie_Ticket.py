@@ -14,7 +14,7 @@ name = input("Enter your name: ").title()
 print(f"\nHi {name}! Book your tickets now.\n")
 movies = {
     "1": ("Action", ["Leo", "Vikram", "Jailer","Spiderman"]),
-    "2": ("Comedy", ["Jathi Ratnalu", "F2", "MAD"]),
+    "2": ("Comedy", ["Jathi Ratnalu", "F2", "Mad"]),
     "3": ("Horror", ["Masooda", "Virupaksha", "Kanchana"]),
     "4": ("Romance", ["Hi Nanna", "Sita Ramam", "Geetha Govindam"])
 }
