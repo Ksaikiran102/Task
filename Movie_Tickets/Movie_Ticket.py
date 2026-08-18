@@ -199,3 +199,15 @@ if choice in movies:
         print("Movie not available in this genre.")
 else:
     print("Invalid genre choice.")
+
+"""
+Output:
+========== BOOKING CONFIRMED ==========
+
+Customer     : Saikiran
+Genre        : Action
+Movie        : Leo
+Booking Date : 18-08-2026
+Show Time    : 07:30 PM
+Seats        : A2, A3
+Ticket ID    : 583921"""
